@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels: 
+    app: worker
+  name: worker
+spec: 
+  minReadySeconds: 20
+  replicas: 1
+  template:
+    spec: 
+      containers: 
+      - image: schoolofdevops/worker:latest
+        name: worker
+      
